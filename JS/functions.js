@@ -1,90 +1,210 @@
-// #### TIPO DE VARIABLES
-// Const para constantes
+// TIPOS DE VARIABLES
+// const para constantes
 const pi = 3.1416;
 const pul = 2.54;
 // var para variables globales
 var cant_days = 10;
-var name     = "Andrés Rojas";  
-// lef para variables de bloque o locales
+var name      = "Andrés Rojas";
+// let para variables de bloque o locales
 let count = 5;
 let i     = 0;
 
-// ###### FORMAS DE IMPRESION O SALIDA EN PANTALLA
+
+// FORMAS DE IMPRESIÓN O SALIDA EN PANTALLA
 // alert
-// alert(name);
-// console
+//alert(name);
+//console
 console.log(cant_days);
 console.log("10");
-// body - pantalla
+//body - pantalla
 document.write(name);
-document.getElementById("text_one").innerHTML = "<h1>Andrés Rojas</h1>"
-document.getElementById("text_two").innerText = "<h1>Andrés Rojas</h1>"
-
-// librerias por ejem sweetalert
+document.getElementById("text_one").innerHTML = "<h1>Andres Rojas</h1>";
+document.getElementById("text_two").innerText = "<h1>Andres Rojas</h1>";
+// Librerías por ejemplo sweetaler
 Swal.fire({
     icon: 'success',
-    title: 'Andrés Rojas',
-    Text: 'Estudiante de la UFPSO',
+    title: 'Andres Rojas',
+    text: 'Estudiante de UFPSO',
     footer: name,
     showConfirmButton: false,
     timer: 2000,
     background: '#000'
+ //   showCloseButton: false,
+  //  ShowCancelButton: false,
 });
 
-// #### TIPOS DE DATOS
+
+// TIPO DE DATOS
 // Numéricos
 let number_one = 10;
 let number_two = 5.5;
 // string
 let text = "Soy un texto";
-//boleanos
+// booleanos
 let boolean = true; //false
-//array
+// array
 let array_num = [1,2,3,4,5,6];
-let array_tex = ["Lunes", "Martes","Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+let array_text = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
 let array_mix = [1.5, "a", 10, "b"];
 let array_mul = [
- {name: "Andrés", last_name: "Rojas", age:19},
- {name: "Juan", last_name: "Gonzalez", age:17},
- {name: "Nicolas", last_name: "Lazaro", age:19},
- {name: "Brithney", last_name: "Guerrero", age:19}
-];
+    {name: "Andres" ,last_name: "Rojas" , age:19},
+    {name: "Juan" ,last_name: "Gonzalez", age:17},
+    {name: "Nicolas" ,last_name: "Lazaro", age:19},
+    {name: "Brithney" ,last_name: "Guerrero", age:19}
+]
 
-// ########## OPERADORES BASICOS
-// SUMA +
-var suma = number_one + number_two;
-console.log("Suma=" + suma);
-
-// RESTA -
+// Operadores básicas
+// Suma +
+var suma = number_one+number_two;
+console.log("Suma = "+suma);
+// Resta -
 var resta = number_one - number_two;
-console.log("Resta=" + resta);
+console.log("Resta = "+resta);
+// Multiplicación *
+var multi = number_one*number_two;
+console.log("Multiplicación = "+multi);
+// División / 
+var div = number_one/number_two;
+//div = div.toFixed(2);
+console.log("División = "+div.toFixed(2));
+// Modulo %
+var modulo = number_one%number_two;
+console.log("Módulo = "+modulo);
 
-// MULTIPLICACION *
-var multi = number_one * number_two;
-console.log("Multi=" + multi);
-
-// DIVISION /
-var divi = number_one / number_two;
-// divi = divi.toFixed(2);
-console.log("División=" + divi.toFixed(2));
-
-// MODULO %
-var modulo = number_one % number_two;
-console.log("Modulo=" + modulo);
-
-console.log("Suma=" + suma + "\n" +
-"Resta=" + resta + "\n" +
-"Multi=" + multi + "\n" +
-"División=" + divi.toFixed(2) + "\n" + 
-"Modulo=" + modulo 
-
+console.log("Suma = "+suma +"\n"+
+    "Resta = "+resta +"\n"+
+    "Multiplicación = "+multi +"\n"+
+    "División = "+div.toFixed(2) +"\n"+
+    "Módulo = "+modulo
 )
-var respuesta =  ("Suma =" + suma + "<br>" + "Resta=" + resta + "<br>" + "Multi=" + multi + "<br>" + "División=" + divi.toFixed(2) + "<br>" +  "Modulo=" + modulo);
 
+var respuesta = ("Suma = "+suma +"<br>"+"Resta = "+resta +"<br>"+"Multiplicación = "+multi +"<br>"+"División = "+div.toFixed(2) +"<br>"+"Módulo = "+modulo);
 Swal.fire({
     icon: 'success',
     title: 'Resultados',
     html: respuesta,
     background: '#fff'
-
 });
+
+//Operadores lógicos y estructuras condicionales (inverse, incremento y decremento)
+// AND && con if
+var bool    = false;
+var numeric = 5;
+if(!bool && numeric == 5){ // bool == true
+    console.log("ingresa if: "+bool);
+
+}
+else{
+    console.log("ingresa else: "+bool);
+}
+
+
+// Or || con if
+var age = 31;
+if(age == 31 || numeric == "5"){
+    console.log("ingresa if: "+bool);
+    age++;
+
+}
+else{
+    console.log("ingresa else: "+bool);
+}
+console.log(age);
+
+console.log("");
+console.log("FOR");
+//For
+console.log(array_text.length);
+for(let i=0; i<array_text.length; i++){
+    console.log(array_text[i] + (i+1));
+}
+console.log("");
+console.log("WHILE");
+
+// While
+let j=0;
+while(j<array_text.length){
+    console.log(array_text[j] + (j+1));
+    j++
+}
+console.log("");
+console.log("DO WHILE");
+//Do While
+let w =0;
+do{
+    console.log(array_text[w]);
+    w++;
+}
+while(w<array_text.length)
+
+//CREAR FUNCIONES
+function load_page(){
+    //alert("BIENVENIDO A MI SITIO WEB")
+}
+var color = "#fff";
+function change_color(){
+    document.body.style.backgroundColor= "red";
+    document.body.style.color= color;
+}
+
+const btn_clear = document.querySelector("#limpiar");
+btn_clear.addEventListener("click", () => {
+    document.body.style.backgroundColor= "white";
+    document.body.style.color= "#000";
+});
+
+// FORMULARIO DE REGISTRO
+const form_register = document.getElementById("form_register");
+const nombres = document.getElementById("nombres");
+const apellidos = document.getElementById("apellidos");
+const validation = document.getElementById("validation");
+
+form_register.addEventListener("submit", event_name => {
+    event_name.preventDefault();
+    let info = "";
+    if(nombres.value.length <= 2 || apellidos.value.length){
+        info += "Nombres y/o Apellidos deben ser mayores a 2 letras";
+        validation.style.color = "red";
+    }
+    else{
+        alert(nombres + " " + apellidos);
+        nombres.style.backgroundColor = "green";
+        apellidos.style.backgroundColor = "green";
+    }
+    validation.innerText = info;
+}
+
+)
+function load_page(){
+
+document.getElementById("nombres").focus();
+document.getElementById("apellidos").disabled = true;
+let date= new Date();
+console.log(date.getFullYear());
+
+for(let a=0;a<array_text.length;a++){
+
+}
+
+
+}
+function validate(){
+      
+    alert("FUNCIONA");
+    let nombres = document.getElementById("nombres").value;
+    console.log(nombres.length);
+    if(nombres.length >2) {
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        alert(nombres.split(""));
+              
+    }
+
+}
+
+function limpiar(){
+    let nombres = document.getElementById("nombres").value;
+         
+
+
+}
